@@ -30,14 +30,12 @@ for(i=0; i<7;i++){
 console.log(dias[i]);
 }
 */
-function suma(numero1,numero2) 
-{
-var resultado= numero1+nemero2;return (resultado);
-}
 
 function validateForm() {
-    var x = document.forms["myForm"]["numero1"].value;
-    var y = document.forms["myForm"]["numero2"].value;
+    var x = parseInt (document.forms["myForm"]["numero1"].value);
+    var y = parseInt( document.forms["myForm"]["numero2"].value);
+
+  
     if (x == "") {
         alert("Name must be filled out");
         return false;
@@ -45,4 +43,9 @@ function validateForm() {
             alert("Name must be filled out");
             return false;
     }
+    var iva = x*(y/100);
+    return iva;
 }
+}
+var resultado = precio(20000,19);
+console.log(resultado);
